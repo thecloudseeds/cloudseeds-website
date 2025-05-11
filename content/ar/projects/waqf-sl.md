@@ -1,12 +1,12 @@
 ---
-title: "مشروع رصد: نظام المراقبة والتتبع الموزع"
-date: 2023-09-22T11:45:00+03:00
-draft: true
+title: "مشروع وقف: رخصة رقمية مفتوحة المصدر"
+date: 2025-05-11T11:45:00+03:00
+draft: false
 image: "/img/projects/rasad.jpg"
 maturity: "مرحلة الرؤية"
-github: "https://github.com/cloudseeds-mena/rasad"
-website: "https://rasad.cloudseeds-mena.org"
-tagline: "نظام مراقبة وتتبع مفتوح المصدر للبنيات التحتية السحابية"
+github: "https://github.com/mfouad/waqf-sl"
+website: "https://github.com/mfouad/waqf-sl"
+tagline: "هى رخصة وقفية، مجيزة، وموجهة للشركات"
 section_tags: ["projects"]
 ---
 

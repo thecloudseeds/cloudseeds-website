@@ -1,7 +1,7 @@
 ---
 title: "مشروع سحاب: منصة إدارة الحاويات المحلية"
 date: 2023-06-10T08:30:00+03:00
-draft: false
+draft: true
 image: "/img/projects/sahab.jpg"
 maturity: "مرحلة النمو"
 github: "https://github.com/cloudseeds-mena/sahab"

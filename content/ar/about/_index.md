@@ -10,7 +10,7 @@ type: "page"
 <div class="hero-section">
     <h1>مؤسسة كلاود سيدز منا</h1>
     <p>نقود الابتكار في مجال الحوسبة السحابية المفتوحة المصدر في منطقة الشرق الأوسط</p>
-    <a href="/ar/community" class="btn-primary">انضم إلينا</a>
+    <a href="/community" class="btn-primary">انضم إلينا</a>
 </div>
 
 ## رؤيتنا

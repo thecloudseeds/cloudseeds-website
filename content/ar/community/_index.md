@@ -7,39 +7,6 @@ type: "page"
 
 # مجتمع كلاود سيدز منا
 
-<div class="hero-section">
-    <h1>انضم إلى مجتمعنا</h1>
-    <p>كلاود سيدز منا هي مؤسسة مفتوحة المصدر تقودها المجتمع. تعرف على كيفية المشاركة والمساهمة في تطوير الحوسبة السحابية في منطقة الشرق الأوسط.</p>
-    <a href="#get-involved" class="btn-primary">ابدأ الآن</a>
-</div>
-
-<div class="community-section">
-    <h2>مجتمعنا بالأرقام</h2>
-    
-    <div class="stats-grid">
-        <div class="stat-item">
-            <div class="number">4500+</div>
-            <div class="label">مساهم</div>
-        </div>
-        
-        <div class="stat-item">
-            <div class="number">150+</div>
-            <div class="label">شركة عضو</div>
-        </div>
-        
-        <div class="stat-item">
-            <div class="number">25+</div>
-            <div class="label">فعالية سنوية</div>
-        </div>
-        
-        <div class="stat-item">
-            <div class="number">12</div>
-            <div class="label">مشروع نشط</div>
-        </div>
-    </div>
-</div>
-
-<h2 id="get-involved">كيفية المشاركة</h2>
 
 ## مجموعات العمل
 
