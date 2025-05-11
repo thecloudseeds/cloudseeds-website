@@ -1,0 +1,137 @@
+{{ define "main" }}
+<!-- Start of custom community layout -->
+<div class="community-page-wrapper">
+    <div class="hero-section">
+        <h1>{{ .Title }}</h1>
+        <p>{{ .Description | default "كلاود سيدز منا هي مؤسسة مفتوحة المصدر تقودها المجتمع. تعرف على كيفية المشاركة والمساهمة في تطوير الحوسبة السحابية في منطقة الشرق الأوسط." }}</p>
+        <a href="#get-involved" class="btn-primary">ابدأ الآن</a>
+    </div>
+
+    <div class="community-section">
+        <h2>مجتمعنا بالأرقام</h2>
+        
+        <div class="stats-grid">
+            <div class="stat-item">
+                <div class="number">4500+</div>
+                <div class="label">مساهم</div>
+            </div>
+            
+            <div class="stat-item">
+                <div class="number">150+</div>
+                <div class="label">شركة عضو</div>
+            </div>
+            
+            <div class="stat-item">
+                <div class="number">25+</div>
+                <div class="label">فعالية سنوية</div>
+            </div>
+            
+            <div class="stat-item">
+                <div class="number">12</div>
+                <div class="label">مشروع نشط</div>
+            </div>
+        </div>
+    </div>
+
+    <div class="get-involved-section" id="get-involved">
+        <h2>كيفية المشاركة</h2>
+        
+        <div class="involvement-grid">
+            <div class="involvement-card">
+                <h3>مجموعات العمل</h3>
+                <p>انضم إلى مجموعات العمل المتخصصة لتطوير تقنيات ومشاريع محددة في مؤسسة كلاود سيدز.</p>
+                <a href="/ar/community/workgroups" class="btn-secondary">استكشف المجموعات</a>
+            </div>
+            
+            <div class="involvement-card">
+                <h3>المساهمة في الكود</h3>
+                <p>ساهم بخبراتك البرمجية في مشاريع مفتوحة المصدر التي تطورها مؤسسة كلاود سيدز منا.</p>
+                <a href="https://github.com/cloudseeds-mena" class="btn-secondary">ابدأ المساهمة</a>
+            </div>
+            
+            <div class="involvement-card">
+                <h3>برنامج السفراء</h3>
+                <p>كن سفيراً لكلاود سيدز في مجتمعك المحلي ونشر المعرفة حول الحوسبة السحابية.</p>
+                <a href="/ar/community/ambassador-program" class="btn-secondary">تعرف على البرنامج</a>
+            </div>
+        </div>
+    </div>
+
+    <div class="events-section">
+        <h2>الفعاليات</h2>
+        
+        <div class="events-grid">
+            <div class="event-card">
+                <img src="/img/conference.jpg" alt="مؤتمر كلاود سيدز" class="event-image">
+                <div class="event-details">
+                    <div class="event-date">أكتوبر 2025</div>
+                    <h3>المؤتمر السنوي لكلاود سيدز منا</h3>
+                    <p>الحدث الرئيسي لمجتمعنا، يجمع المطورين والمهندسين من جميع أنحاء المنطقة.</p>
+                    <a href="/ar/events/annual-conference-2025" class="btn-primary">سجل الآن</a>
+                </div>
+            </div>
+            
+            <div class="event-card">
+                <img src="/img/workshop.jpg" alt="ورشة عمل" class="event-image">
+                <div class="event-details">
+                    <div class="event-date">شهرياً</div>
+                    <h3>ورش العمل الفنية</h3>
+                    <p>ورش عمل تقنية متعمقة حول مشاريع كلاود سيدز وتقنيات الحوسبة السحابية.</p>
+                    <a href="/ar/events" class="btn-primary">جميع ورش العمل</a>
+                </div>
+            </div>
+            
+            <div class="event-card">
+                <img src="/img/meetup.jpg" alt="ملتقى محلي" class="event-image">
+                <div class="event-details">
+                    <div class="event-date">أسبوعياً</div>
+                    <h3>ملتقيات المجتمع المحلية</h3>
+                    <p>اجتماعات منتظمة في مدن مختلفة عبر منطقة الشرق الأوسط.</p>
+                    <a href="/ar/events" class="btn-primary">اعثر على ملتقى قريب</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="channels-section">
+        <h2>قنوات التواصل</h2>
+        
+        <div class="channels-grid">
+            <div class="channel-card">
+                <img src="/img/slack-icon.svg" alt="Slack" class="channel-icon">
+                <h3>Slack</h3>
+                <p>انضم إلى مجتمعنا على Slack للتواصل مع المطورين وفرق المشاريع.</p>
+                <a href="https://cloudseeds-mena.slack.com" class="btn-channel">انضم إلينا على Slack</a>
+            </div>
+            
+            <div class="channel-card">
+                <img src="/img/mail-icon.svg" alt="البريد الإلكتروني" class="channel-icon">
+                <h3>القوائم البريدية</h3>
+                <p>اشترك في قوائمنا البريدية للبقاء على اطلاع بالتحديثات والمناقشات.</p>
+                <a href="mailto:announce-subscribe@cloudseeds-mena.org" class="btn-channel">اشترك الآن</a>
+            </div>
+            
+            <div class="channel-card">
+                <img src="/img/github-icon.svg" alt="GitHub" class="channel-icon">
+                <h3>GitHub</h3>
+                <p>تابع تطورات مشاريعنا وساهم بالكود والتوثيق على GitHub.</p>
+                <a href="https://github.com/cloudseeds-mena" class="btn-channel">زر صفحتنا</a>
+            </div>
+            
+            <div class="channel-card">
+                <img src="/img/social-icon.svg" alt="وسائل التواصل الاجتماعي" class="channel-icon">
+                <h3>التواصل الاجتماعي</h3>
+                <p>تابعنا على منصات التواصل الاجتماعي للبقاء على اطلاع بأحدث أخبارنا.</p>
+                <a href="https://twitter.com/cloudseeds_mena" class="btn-channel">تابعنا</a>
+            </div>
+        </div>
+    </div>
+    
+    <!-- Original content from markdown -->
+    <div class="original-content">
+        {{ .Content }}
+    </div>
+</div>
+
+<!-- End of custom community layout -->
+{{ end }}

@@ -1,0 +1,71 @@
+baseURL = "https://cloudseeds-mena.org/"
+languageCode = "ar-sa"
+defaultContentLanguage = "ar"
+title = "كلاود سيدز - منطقة الشرق الأوسط"
+# Removed theme reference
+
+# Enable right-to-left support for Arabic
+[languages.ar]
+  languageName = "العربية"
+  weight = 10
+  title = "كلاود سيدز منا"
+  description = "مؤسسة كلاود سيدز للمصادر المفتوحة في منطقة الشرق الأوسط"
+  contentDir = "content/ar"
+
+# Add custom taxonomy for section tags
+[taxonomies]
+  section_tag = "section_tags"
+
+[params]
+  # Main sections
+  mainSections = ["blog", "news"]
+  
+  # Custom CSS for RTL Arabic Support
+  customCSS = ["css/custom.css"]
+  
+  # Social media links
+  # -----------------------------------------------
+  twitter = "cloudseeds_mena"
+  facebook = "cloudseedsmena"
+  github = "cloudseeds-mena"
+  linkedin = "company/cloudseeds-mena"
+  youtube = "cloudseedsmena"
+
+  # Show reading time
+  showReadingTime = true
+  
+  # Logo
+  customImage = "img/cloud-light.svg"
+  
+  # Favicon
+  favicon = "img/cloud-light.svg"
+  
+  # Footer information
+  copyrightBy = "كلاود سيدز منا"
+  copyrightUseCurrentYear = true
+  copyrightUrl = "https://cloudseeds-mena.org"
+
+# Main menu items
+[[menu.main]]
+  name = "عن المؤسسة"
+  identifier = "about"
+  url = "/about/"
+  weight = 10
+
+[[menu.main]]
+  name = "المشاريع"
+  identifier = "projects"
+  url = "/projects/"
+  weight = 20
+
+[[menu.main]]
+  name = "المجتمع"
+  identifier = "community"
+  url = "/community/"
+  weight = 30
+
+[[menu.main]]
+  name = "المدونة والأخبار"
+  identifier = "news"
+  url = "/news/"
+  weight = 40

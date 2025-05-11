@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="500px" height="500px" viewBox="0 0 500 500" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <title>Cloud Seeds Pattern</title>
+    <g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g fill="#FFFFFF">
+            <circle opacity="0.2" cx="50" cy="50" r="6"></circle>
+            <circle opacity="0.1" cx="100" cy="50" r="10"></circle>
+            <circle opacity="0.15" cx="150" cy="50" r="4"></circle>
+            <circle opacity="0.2" cx="200" cy="50" r="8"></circle>
+            <circle opacity="0.15" cx="250" cy="50" r="5"></circle>
+            <circle opacity="0.1" cx="300" cy="50" r="7"></circle>
+            <circle opacity="0.2" cx="350" cy="50" r="4"></circle>
+            <circle opacity="0.15" cx="400" cy="50" r="9"></circle>
+            <circle opacity="0.1" cx="450" cy="50" r="6"></circle>
+            
+            <circle opacity="0.15" cx="50" cy="100" r="8"></circle>
+            <circle opacity="0.2" cx="100" cy="100" r="5"></circle>
+            <circle opacity="0.1" cx="150" cy="100" r="7"></circle>
+            <circle opacity="0.15" cx="200" cy="100" r="4"></circle>
+            <circle opacity="0.2" cx="250" cy="100" r="9"></circle>
+            <circle opacity="0.1" cx="300" cy="100" r="6"></circle>
+            <circle opacity="0.15" cx="350" cy="100" r="5"></circle>
+            <circle opacity="0.2" cx="400" cy="100" r="7"></circle>
+            <circle opacity="0.1" cx="450" cy="100" r="4"></circle>
+            
+            <circle opacity="0.1" cx="50" cy="150" r="5"></circle>
+            <circle opacity="0.15" cx="100" cy="150" r="7"></circle>
+            <circle opacity="0.2" cx="150" cy="150" r="4"></circle>
+            <circle opacity="0.1" cx="200" cy="150" r="9"></circle>
+            <circle opacity="0.15" cx="250" cy="150" r="6"></circle>
+            <circle opacity="0.2" cx="300" cy="150" r="5"></circle>
+            <circle opacity="0.1" cx="350" cy="150" r="7"></circle>
+            <circle opacity="0.15" cx="400" cy="150" r="4"></circle>
+            <circle opacity="0.2" cx="450" cy="150" r="8"></circle>
+            
+            <circle opacity="0.2" cx="50" cy="200" r="7"></circle>
+            <circle opacity="0.1" cx="100" cy="200" r="4"></circle>
+            <circle opacity="0.15" cx="150" cy="200" r="9"></circle>
+            <circle opacity="0.2" cx="200" cy="200" r="6"></circle>
+            <circle opacity="0.1" cx="250" cy="200" r="5"></circle>
+            <circle opacity="0.15" cx="300" cy="200" r="7"></circle>
+            <circle opacity="0.2" cx="350" cy="200" r="4"></circle>
+            <circle opacity="0.1" cx="400" cy="200" r="8"></circle>
+            <circle opacity="0.15" cx="450" cy="200" r="5"></circle>
+            
+            <circle opacity="0.15" cx="50" cy="250" r="4"></circle>
+            <circle opacity="0.2" cx="100" cy="250" r="8"></circle>
+            <circle opacity="0.1" cx="150" cy="250" r="5"></circle>
+            <circle opacity="0.15" cx="200" cy="250" r="7"></circle>
+            <circle opacity="0.2" cx="250" cy="250" r="4"></circle>
+            <circle opacity="0.1" cx="300" cy="250" r="9"></circle>
+            <circle opacity="0.15" cx="350" cy="250" r="6"></circle>
+            <circle opacity="0.2" cx="400" cy="250" r="5"></circle>
+            <circle opacity="0.1" cx="450" cy="250" r="7"></circle>
+            
+            <circle opacity="0.1" cx="50" cy="300" r="9"></circle>
+            <circle opacity="0.15" cx="100" cy="300" r="6"></circle>
+            <circle opacity="0.2" cx="150" cy="300" r="5"></circle>
+            <circle opacity="0.1" cx="200" cy="300" r="7"></circle>
+            <circle opacity="0.15" cx="250" cy="300" r="4"></circle>
+            <circle opacity="0.2" cx="300" cy="300" r="8"></circle>
+            <circle opacity="0.1" cx="350" cy="300" r="5"></circle>
+            <circle opacity="0.15" cx="400" cy="300" r="7"></circle>
+            <circle opacity="0.2" cx="450" cy="300" r="4"></circle>
+            
+            <circle opacity="0.2" cx="50" cy="350" r="6"></circle>
+            <circle opacity="0.1" cx="100" cy="350" r="5"></circle>
+            <circle opacity="0.15" cx="150" cy="350" r="7"></circle>
+            <circle opacity="0.2" cx="200" cy="350" r="4"></circle>
+            <circle opacity="0.1" cx="250" cy="350" r="8"></circle>
+            <circle opacity="0.15" cx="300" cy="350" r="5"></circle>
+            <circle opacity="0.2" cx="350" cy="350" r="7"></circle>
+            <circle opacity="0.1" cx="400" cy="350" r="4"></circle>
+            <circle opacity="0.15" cx="450" cy="350" r="9"></circle>
+            
+            <circle opacity="0.15" cx="50" cy="400" r="5"></circle>
+            <circle opacity="0.2" cx="100" cy="400" r="7"></circle>
+            <circle opacity="0.1" cx="150" cy="400" r="4"></circle>
+            <circle opacity="0.15" cx="200" cy="400" r="8"></circle>
+            <circle opacity="0.2" cx="250" cy="400" r="5"></circle>
+            <circle opacity="0.1" cx="300" cy="400" r="7"></circle>
+            <circle opacity="0.15" cx="350" cy="400" r="4"></circle>
+            <circle opacity="0.2" cx="400" cy="400" r="9"></circle>
+            <circle opacity="0.1" cx="450" cy="400" r="6"></circle>
+            
+            <circle opacity="0.1" cx="50" cy="450" r="7"></circle>
+            <circle opacity="0.15" cx="100" cy="450" r="4"></circle>
+            <circle opacity="0.2" cx="150" cy="450" r="9"></circle>
+            <circle opacity="0.1" cx="200" cy="450" r="6"></circle>
+            <circle opacity="0.15" cx="250" cy="450" r="5"></circle>
+            <circle opacity="0.2" cx="300" cy="450" r="7"></circle>
+            <circle opacity="0.1" cx="350" cy="450" r="4"></circle>
+            <circle opacity="0.15" cx="400" cy="450" r="8"></circle>
+            <circle opacity="0.2" cx="450" cy="450" r="5"></circle>
+        </g>
+    </g>
+</svg>

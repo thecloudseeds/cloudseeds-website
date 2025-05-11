@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="{{ .Site.Language.Lang }}">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{ if .IsHome }}{{ .Site.Title }}{{ else }}{{ .Title }} - {{ .Site.Title }}{{ end }}</title>
+    
+    <!-- Custom CSS -->
+    {{ range .Site.Params.customCSS }}
+        <link rel="stylesheet" href="{{ . | relURL }}">
+    {{ end }}
+    
+    <!-- Font Awesome for icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Meta tags -->
+    <meta name="description" content="{{ if .Description }}{{ .Description }}{{ else }}{{ .Site.Params.description }}{{ end }}">
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/svg+xml" href="{{ "img/cloud-light.svg" | relURL }}">
+    <link rel="alternate icon" type="image/png" href="{{ "img/favicon.png" | relURL }}">
+</head>
+<body>
+    <header class="main-header">
+        <nav class="main-nav">
+            <div class="logo">
+                <a href="{{ .Site.BaseURL }}">
+                    {{ if .Site.Params.customImage }}
+                        <img src="{{ .Site.Params.customImage | relURL }}" alt="{{ .Site.Title }}">
+                    {{ else }}
+                        <span>{{ .Site.Title }}</span>
+                    {{ end }}
+                </a>
+            </div>
+            <div class="nav-links">
+                {{ $currentPage := . }}
+                {{ range .Site.Menus.main }}
+                    <a href="{{ .URL | relLangURL }}" class="{{ if $currentPage.IsMenuCurrent "main" . }}active{{ end }}">
+                        {{ if eq .Identifier "about" }}
+                            <i class="fas fa-info-circle"></i>
+                        {{ else if eq .Identifier "projects" }}
+                            <i class="fas fa-code-branch"></i>
+                        {{ else if eq .Identifier "community" }}
+                            <i class="fas fa-users"></i>
+                        {{ else if eq .Identifier "news" }}
+                            <i class="fas fa-newspaper"></i>
+                        {{ else }}
+                            <i class="fas fa-link"></i>
+                        {{ end }}
+                        <span>{{ .Name }}</span>
+                    </a>
+                {{ end }}
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        {{ block "main" . }}{{ end }}
+    </main>
+
+    <footer>
+        <div class="footer-grid">
+            <div class="footer-col">
+                <h3>عن المؤسسة</h3>
+                <ul>
+                    <li><a href="/about/">من نحن</a></li>
+                    <li><a href="/about/team">فريق العمل</a></li>
+                    <li><a href="/about/governance">الحوكمة</a></li>
+                    <li><a href="/about/sponsors">الرعاة</a></li>
+                </ul>
+            </div>
+            
+            <div class="footer-col">
+                <h3>المشاريع</h3>
+                <ul>
+                    <li><a href="/projects/">جميع المشاريع</a></li>
+                    <li><a href="/projects/incubating">المشاريع الناشئة</a></li>
+                    <li><a href="/projects/graduated">المشاريع المتخرجة</a></li>
+                </ul>
+            </div>
+            
+            <div class="footer-col">
+                <h3>المجتمع</h3>
+                <ul>
+                    <li><a href="/community/">كيفية المشاركة</a></li>
+                    <li><a href="/community/events">الفعاليات</a></li>
+                    <li><a href="/community/ambassador-program">برنامج السفراء</a></li>
+                </ul>
+            </div>
+            
+            <div class="footer-col">
+                <h3>تواصل معنا</h3>
+                <div class="social-links">
+                    {{ if .Site.Params.twitter }}
+                    <a href="https://twitter.com/{{ .Site.Params.twitter }}" target="_blank"><i class="fab fa-twitter"></i></a>
+                    {{ end }}
+                    
+                    {{ if .Site.Params.facebook }}
+                    <a href="https://facebook.com/{{ .Site.Params.facebook }}" target="_blank"><i class="fab fa-facebook"></i></a>
+                    {{ end }}
+                    
+                    {{ if .Site.Params.github }}
+                    <a href="https://github.com/{{ .Site.Params.github }}" target="_blank"><i class="fab fa-github"></i></a>
+                    {{ end }}
+                    
+                    {{ if .Site.Params.linkedin }}
+                    <a href="https://linkedin.com/in/{{ .Site.Params.linkedin }}" target="_blank"><i class="fab fa-linkedin"></i></a>
+                    {{ end }}
+                    
+                    {{ if .Site.Params.youtube }}
+                    <a href="https://youtube.com/{{ .Site.Params.youtube }}" target="_blank"><i class="fab fa-youtube"></i></a>
+                    {{ end }}
+                </div>
+            </div>
+        </div>
+        
+        <div class="copyright">
+            &copy; {{ if .Site.Params.copyrightUseCurrentYear }}{{ now.Format "2006" }}{{ else }}2022{{ end }} {{ .Site.Params.copyrightBy }}. جميع الحقوق محفوظة.
+        </div>
+    </footer>
+</body>
+</html>

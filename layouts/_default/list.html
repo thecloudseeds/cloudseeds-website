@@ -1,0 +1,64 @@
+{{ define "main" }}
+<div class="section-list-page">
+    <div class="hero-section">
+        <h1>{{ .Title }}</h1>
+        {{ if .Description }}
+            <p>{{ .Description }}</p>
+        {{ end }}
+    </div>
+    
+    <div class="content-container">
+        {{ if .Content }}
+        <div class="section-content">
+            {{ .Content }}
+        </div>
+        {{ end }}
+        
+        <div class="posts-grid">
+            {{ $currentSection := .Section }}
+            {{ $pages := slice }}
+            
+            {{ if eq .Type "page" }}
+                {{ $pages = .Site.RegularPages.ByDate.Reverse }}
+            {{ else if eq .Kind "taxonomy" }}
+                {{ $pages = .Pages.ByDate.Reverse }}
+            {{ else if eq .Kind "term" }}
+                {{ $pages = .Pages.ByDate.Reverse }}
+            {{ else }}
+                {{ $tagName := $currentSection }}
+                {{ range .Site.Pages }}
+                    {{ if and .IsPage (in .Params.section_tags $tagName) }}
+                        {{ $pages = $pages | append . }}
+                    {{ end }}
+                {{ end }}
+                {{ $pages = $pages.ByDate.Reverse }}
+            {{ end }}
+            
+            {{ range $pages }}
+            <div class="post-card">
+                <a href="{{ .RelPermalink }}">
+                    {{ if .Params.image }}
+                    <div class="post-image">
+                        <img src="{{ .Params.image | relURL }}" alt="{{ .Title }}">
+                    </div>
+                    {{ end }}
+                    <div class="post-content">
+                        <h2>{{ .Title }}</h2>
+                        {{ if .Params.tagline }}
+                        <div class="post-tagline">{{ .Params.tagline }}</div>
+                        {{ end }}
+                        {{ if .Date }}
+                        <div class="post-date">{{ .Date.Format "2006-01-02" }}</div>
+                        {{ end }}
+                        {{ if .Params.maturity }}
+                        <div class="post-maturity">{{ .Params.maturity }}</div>
+                        {{ end }}
+                        <p>{{ .Summary }}</p>
+                    </div>
+                </a>
+            </div>
+            {{ end }}
+        </div>
+    </div>
+</div>
+{{ end }}

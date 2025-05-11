@@ -1,0 +1,98 @@
+{{ define "main" }}
+<div class="home-wrapper">
+    <!-- Hero Section -->
+    <div class="hero-section">
+        <h1>كلاود سيدز</h1>
+        <p>مؤسسة كلاود سيدز للمصادر المفتوحة في منطقة الشرق الأوسط</p>
+        <div class="hero-buttons">
+            <a href="/ar/community/" class="btn-primary">انضم إلى المجتمع</a>
+            <a href="/ar/projects/" class="btn-secondary">استكشف المشاريع</a>
+        </div>
+    </div>
+
+    <!-- Featured Projects Section -->
+    <div class="featured-section">
+        <h2>مشاريعنا</h2>
+        <div class="featured-grid">
+            <div class="featured-card">
+                <h3>المشاريع المفتوحة</h3>
+                <p>استكشف مشاريع المصادر المفتوحة التي تدعمها كلاود سيدز منا وتعرف على كيفية المساهمة فيها.</p>
+                <a href="/ar/projects/" class="btn-more">المزيد</a>
+            </div>
+            
+            <div class="featured-card">
+                <h3>فعاليات المجتمع</h3>
+                <p>تعرف على فعالياتنا القادمة وورش العمل والمؤتمرات في منطقة الشرق الأوسط.</p>
+                <a href="/ar/community/events/" class="btn-more">المزيد</a>
+            </div>
+            
+            <div class="featured-card">
+                <h3>برنامج السفراء</h3>
+                <p>كن سفيراً لكلاود سيدز وساعدنا في نشر ثقافة المصادر المفتوحة والتقنيات السحابية.</p>
+                <a href="/ar/community/ambassador-program/" class="btn-more">المزيد</a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Recent Blog Posts -->
+    <div class="recent-posts-section">
+        <h2>أحدث المقالات</h2>
+        <div class="posts-grid">
+            {{ $blogPages := where .Site.RegularPages "Section" "in" .Site.Params.mainSections }}
+            {{ range first 6 $blogPages.ByDate.Reverse }}
+            <div class="post-card">
+                <a href="{{ .RelPermalink }}">
+                    {{ if .Params.image }}
+                    <div class="post-image">
+                        <img src="{{ .Params.image | relURL }}" alt="{{ .Title }}">
+                    </div>
+                    {{ end }}
+                    <div class="post-content">
+                        <h3>{{ .Title }}</h3>
+                        <div class="post-date">{{ .Date.Format "2006-01-02" }}</div>
+                        <p>{{ .Summary }}</p>
+                    </div>
+                </a>
+            </div>
+            {{ end }}
+        </div>
+        <div class="more-posts">
+            <a href="/ar/blog/" class="btn-primary">جميع المقالات</a>
+        </div>
+    </div>
+
+    <!-- Community Stats -->
+    <div class="community-section">
+        <h2>مجتمعنا بالأرقام</h2>
+        
+        <div class="stats-grid">
+            <div class="stat-item">
+                <div class="number">4500+</div>
+                <div class="label">مساهم</div>
+            </div>
+            
+            <div class="stat-item">
+                <div class="number">150+</div>
+                <div class="label">شركة عضو</div>
+            </div>
+            
+            <div class="stat-item">
+                <div class="number">25+</div>
+                <div class="label">فعالية سنوية</div>
+            </div>
+            
+            <div class="stat-item">
+                <div class="number">12</div>
+                <div class="label">مشروع نشط</div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Call to Action -->
+    <div class="cta-section">
+        <h2>انضم إلينا اليوم</h2>
+        <p>ساهم في بناء مستقبل التقنيات السحابية مفتوحة المصدر في منطقة الشرق الأوسط</p>
+        <a href="/ar/community/" class="btn-primary">اكتشف كيفية المساهمة</a>
+    </div>
+</div>
+{{ end }}
