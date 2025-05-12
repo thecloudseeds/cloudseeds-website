@@ -69,3 +69,9 @@ title = "كلاود سيدز - منطقة الشرق الأوسط"
   identifier = "news"
   url = "/news/"
   weight = 40
+
+# Markdown configuration
+[markup]
+  [markup.goldmark]
+    [markup.goldmark.renderer]
+      unsafe = true  # This allows HTML in markdown content

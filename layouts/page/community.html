@@ -1,0 +1,249 @@
+{{ define "main" }}
+<div class="community-page-wrapper">
+    <div class="hero-section">
+        <h1>{{ .Title }}</h1>
+        <p>{{ .Description }}</p>
+        <a href="#get-involved" class="btn-primary">ابدأ المشاركة</a>
+    </div>
+
+    <!-- Workgroups Section -->
+    <div class="workgroups-section hidden">
+        <h2>مجموعات العمل</h2>
+        <p class="section-description">مجموعات العمل هي فرق مخصصة تركز على مجالات محددة من التكنولوجيا أو القضايا. انضم
+            إلى مجموعة عمل للمساهمة في مشاريع وتأثير فعلي في المجتمع.</p>
+
+        <div class="workgroups-grid">
+            <div class="workgroup-card">
+                <div class="workgroup-icon">
+                    <i class="fas fa-server"></i>
+                </div>
+                <h3>مجموعة عمل البنية التحتية</h3>
+                <p>تركز على تطوير الأدوات والممارسات للبنية التحتية السحابية.</p>
+                <a href="/ar/community/workgroups/infrastructure" class="btn-workgroup">انضم للمجموعة</a>
+            </div>
+
+            <div class="workgroup-card">
+                <div class="workgroup-icon">
+                    <i class="fas fa-shield-alt"></i>
+                </div>
+                <h3>مجموعة عمل الأمان</h3>
+                <p>تعمل على تحسين أمان التطبيقات والبنية التحتية السحابية.</p>
+                <a href="/ar/community/workgroups/security" class="btn-workgroup">انضم للمجموعة</a>
+            </div>
+
+            <div class="workgroup-card">
+                <div class="workgroup-icon">
+                    <i class="fas fa-laptop-code"></i>
+                </div>
+                <h3>مجموعة عمل تجربة المطور</h3>
+                <p>تحسين تجربة المطورين في مشاريع كلاود سيدز.</p>
+                <a href="/ar/community/workgroups/dx" class="btn-workgroup">انضم للمجموعة</a>
+            </div>
+
+            <div class="workgroup-card">
+                <div class="workgroup-icon">
+                    <i class="fas fa-graduation-cap"></i>
+                </div>
+                <h3>مجموعة عمل التعليم</h3>
+                <p>تطوير موارد تعليمية حول الحوسبة السحابية مفتوحة المصدر.</p>
+                <a href="/ar/community/workgroups/education" class="btn-workgroup">انضم للمجموعة</a>
+            </div>
+        </div>
+
+        <div class="cta-workgroups">
+            <a href="/ar/community/workgroups" class="btn-primary">اطلع على جميع مجموعات العمل</a>
+        </div>
+    </div>
+
+    <!-- Events Section -->
+    <div class="events-section" id="get-involved">
+        <h2>الفعاليات</h2>
+        <p class="section-description">نستضيف مجموعة متنوعة من الفعاليات عبر منطقة الشرق الأوسط لبناء المجتمع وتبادل
+            المعرفة.</p>
+
+        <div class="event-highlight hidden">
+            <div class="event-image">
+                <img src="/img/conference.jpg" alt="المؤتمر السنوي لكلاود سيدز منا">
+            </div>
+            <div class="event-details">
+                <span class="event-badge">الحدث الرئيسي</span>
+                <h3>المؤتمر السنوي لكلاود سيدز</h3>
+                <p>الحدث الرئيسي لمجتمعنا، يجمع المطورين والمهندسين والمديرين من جميع أنحاء المنطقة للتعلم والتواصل.</p>
+                <div class="event-metadata">
+                    <div class="event-info">
+                        <i class="fas fa-map-marker-alt"></i>
+                        <span>القاهرة، مصر</span>
+                    </div>
+                    <div class="event-info">
+                        <i class="fas fa-calendar-alt"></i>
+                        <span>أكتوبر 2025</span>
+                    </div>
+                </div>
+                <a href="#" class="btn-certification">لم يتم فتح باب التسجيل</a>
+            </div>
+        </div>
+
+        <div class="events-container">
+            <div class="events-list">
+                <div class="event-card">
+                    <div class="event-type">
+                        <i class="fas fa-laptop"></i>
+                        <span>ورش عمل</span>
+                    </div>
+                    <h3>ورش العمل الفنية</h3>
+                    <p>ورش عمل تقنية متعمقة حول مشاريع كلاود سيدز وتقنيات الحوسبة السحابية.</p>
+                    <a href="https://lu.ma/calendar/cal-MN5gNPmAgldUHBp?tag=workshop" class="btn-more">تعرف على المزيد</a>
+                </div>
+
+                <div class="event-card">
+                    <div class="event-type">
+                        <i class="fas fa-users"></i>
+                        <span>ملتقيات</span>
+                    </div>
+                    <h3>ملتقيات المجتمع المحلية</h3>
+                    <p>اجتماعات منتظمة في مدن مختلفة عبر منطقة الشرق الأوسط.</p>
+                    <a href="https://lu.ma/calendar/cal-MN5gNPmAgldUHBp?tag=meetup" class="btn-more">تعرف على المزيد</a>
+                </div>
+            </div>
+
+            <div class="events-calendar">
+                <!-- Calendar iframe will be placed here -->
+                <iframe src="https://lu.ma/embed/calendar/cal-MN5gNPmAgldUHBp/events"  height="400" width="100%"
+                    scrolling="no" allowtransparency="true" allow="encrypted-media"
+                    frameborder="0" style="border: 0px solid #bfcbda88; border-radius: 4px;" allowfullscreen="yes"
+                    aria-hidden="false" tabindex="0"></iframe>
+            </div>
+        </div>
+
+        <div class="cta-events">
+            <a href="https://lu.ma/calendar/cal-MN5gNPmAgldUHBp" class="btn-primary">تصفح جميع الفعاليات</a>
+        </div>
+    </div>
+
+    <!-- Connect Section -->
+    <div class="connect-section">
+        <h2>قنوات التواصل</h2>
+        <p class="section-description">تواصل مع مجتمع كلاود سيدز منا من خلال قنواتنا المختلفة.</p>
+
+        <div class="channels-grid">
+            <div class="channel-card">
+                <img src="/img/slack-icon.svg" alt="Slack" class="channel-icon">
+                <h3>Slack</h3>
+                <p>انضم إلى مجتمعنا على Slack للتواصل مع المطورين وفرق المشاريع والمستخدمين.</p>
+                <a href="https://cloudseeds-mena.slack.com" class="btn-channel">انضم إلى قناة Slack الخاصة بنا</a>
+            </div>
+
+            <div class="channel-card">
+                <img src="/img/mail-icon.svg" alt="البريد الإلكتروني" class="channel-icon">
+                <h3>القوائم البريدية</h3>
+                <p>اشترك في قوائمنا البريدية للبقاء على اطلاع بالتحديثات والمناقشات:</p>
+                <ul class="mailing-lists">
+                    <li><a href="mailto:announce-subscribe@cloudseeds-mena.org">القائمة الرئيسية للإعلانات</a></li>
+                    <li><a href="mailto:dev-subscribe@cloudseeds-mena.org">قائمة المطورين</a></li>
+                    <li><a href="mailto:users-subscribe@cloudseeds-mena.org">قائمة المستخدمين</a></li>
+                </ul>
+            </div>
+
+            <div class="channel-card">
+                <img src="/img/social-icon.svg" alt="وسائل التواصل الاجتماعي" class="channel-icon">
+                <h3>وسائل التواصل الاجتماعي</h3>
+                <p>تابعنا على منصات التواصل الاجتماعي:</p>
+                <div class="social-links-grid">
+                    <a href="https://twitter.com/cloudseeds_mena" class="social-link">
+                        <i class="fab fa-twitter"></i>
+                        <span>تويتر/X</span>
+                    </a>
+                    <a href="https://linkedin.com/company/cloudseeds-mena" class="social-link">
+                        <i class="fab fa-linkedin"></i>
+                        <span>لينكد إن</span>
+                    </a>
+                    <a href="https://youtube.com/cloudseedsmena" class="social-link">
+                        <i class="fab fa-youtube"></i>
+                        <span>يوتيوب</span>
+                    </a>
+                    <a href="https://github.com/cloudseeds-mena" class="social-link">
+                        <i class="fab fa-github"></i>
+                        <span>جيت هب</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Ambassador Section -->
+    <div class="ambassador-section">
+        <div class="ambassador-content">
+            <h2>برنامج السفراء</h2>
+            <p>سفراء كلاود سيدز منا هم متطوعون متحمسون يمثلون المؤسسة في مجتمعاتهم المحلية، وينشرون المعرفة حول الحوسبة
+                السحابية مفتوحة المصدر.</p>
+            <div class="ambassador-benefits">
+                <div class="benefit-item">
+                    <i class="fas fa-globe"></i>
+                    <h4>تمثيل المؤسسة</h4>
+                    <p>كن صوت كلاود سيدز في مجتمعك المحلي</p>
+                </div>
+                <div class="benefit-item">
+                    <i class="fas fa-chalkboard-teacher"></i>
+                    <h4>مشاركة المعرفة</h4>
+                    <p>قدم ورش عمل ومحادثات عن الحوسبة السحابية</p>
+                </div>
+                <div class="benefit-item">
+                    <i class="fas fa-network-wired"></i>
+                    <h4>بناء شبكة علاقات</h4>
+                    <p>تواصل مع خبراء في مجال الحوسبة السحابية</p>
+                </div>
+            </div>
+            <a href="/ar/community/ambassador-program" class="btn-primary">تعرف على كيفية أن تصبح سفيراً</a>
+        </div>
+        <div class="ambassador-image hidden">
+            <img src="/img/team/ambassadors.jpg" alt="سفراء كلاود سيدز منا">
+        </div>
+    </div>
+<br/>
+
+    <!-- Certifications Section -->
+    <div class="certifications-section hidden">
+        <h2>شهادات وتدريبات</h2>
+        <p class="section-description">نقدم شهادات وتدريبات مختلفة لمساعدة المهنيين على تطوير مهاراتهم في الحوسبة
+            السحابية.</p>
+
+        <div class="certifications-grid">
+            <div class="certification-card">
+                <div class="certification-icon">
+                    <i class="fas fa-certificate"></i>
+                </div>
+                <h3>شهادة مهندس كلاود سيدز المعتمد</h3>
+                <p>شهادة متقدمة للمهندسين المتخصصين في البنية التحتية السحابية.</p>
+                <a href="/ar/training/certified-engineer" class="btn-certification">تفاصيل الشهادة</a>
+            </div>
+
+            <div class="certification-card">
+                <div class="certification-icon">
+                    <i class="fas fa-code"></i>
+                </div>
+                <h3>شهادة مطور تطبيقات كلاود سيدز</h3>
+                <p>للمطورين الذين يبنون تطبيقات تعمل على البنية التحتية السحابية.</p>
+                <a href="/ar/training/certified-developer" class="btn-certification">تفاصيل الشهادة</a>
+            </div>
+
+            <div class="certification-card">
+                <div class="certification-icon">
+                    <i class="fas fa-shield-alt"></i>
+                </div>
+                <h3>شهادة مهندس أمان كلاود سيدز</h3>
+                <p>شهادة متخصصة في أمان البنية التحتية والتطبيقات السحابية.</p>
+                <a href="/ar/training/certified-security" class="btn-certification">تفاصيل الشهادة</a>
+            </div>
+        </div>
+
+        <div class="cta-certifications">
+            <a href="/ar/training" class="btn-primary">استكشف برامج الشهادات</a>
+        </div>
+    </div>
+
+    <!-- Original content for SEO (hidden) -->
+    <div class="markdown-content" style="display: none;">
+        {{ .Content }}
+    </div>
+</div>
+{{ end }}

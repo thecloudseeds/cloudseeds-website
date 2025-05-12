@@ -1,0 +1,331 @@
+{{ define "main" }}
+<div class="projects-page-wrapper">
+    <!-- Hero section -->
+    <div class="hero-section">
+        <h1>{{ .Title }}</h1>
+        <p>استكشف المشاريع مفتوحة المصدر التي نرعاها وندعمها في منطقة الشرق الأوسط</p>
+        <a href="#submit-project" class="btn-primary">ساهم في مشروع</a>
+    </div>
+    
+    <div class="content-container">
+        <!-- Introduction content from the index file -->
+        <div class="section-content">
+            {{ if .Content }}
+                {{ .Content }}
+            {{ end }}
+        </div>
+        
+        <!-- Projects Grid -->
+        <h2 class="section-title">مشاريع مستضافة</h2>
+        <div class="projects-grid">
+            {{ $projects := where .Site.RegularPages "Section" "projects" }}
+            {{ range $projects }}
+                <div class="project-card">
+                    <div class="project-image">
+                        {{ if .Params.image }}
+                            <img src="{{ .Params.image | relURL }}" alt="{{ .Title }}">
+                        {{ else }}
+                            <img src="/img/cloud-leaf.svg" alt="{{ .Title }}">
+                        {{ end }}
+                    </div>
+                    <div class="project-content">
+                        <h3>{{ .Title }}</h3>
+                        {{ if .Params.tagline }}
+                            <div class="project-tagline">{{ .Params.tagline }}</div>
+                        {{ end }}
+                        {{ if .Params.maturity }}
+                            <div class="project-maturity">{{ .Params.maturity }}</div>
+                        {{ end }}
+                        <p>{{ .Summary }}</p>
+                        <div class="project-links">
+                            <a href="{{ .RelPermalink }}" class="btn-more">معرفة المزيد</a>
+                            {{ if .Params.github }}
+                                <a href="{{ .Params.github }}" class="btn-github" target="_blank">
+                                    <i class="fab fa-github"></i> GitHub
+                                </a>
+                            {{ end }}
+                        </div>
+                    </div>
+                </div>
+            {{ end }}
+        </div>
+        
+        <!-- Project Maturity Levels -->
+        <div class="maturity-section">
+            <h2>مستويات النضج</h2>
+            <p>تتبع كلاود سيدز منا نموذجاً متدرجاً لمستويات نضج المشروع، مما يساعد المستخدمين على فهم المرحلة التطويرية لكل مشروع.</p>
+            
+            <div class="maturity-grid">
+                <div class="maturity-card">
+                    <div class="maturity-icon">
+                        <i class="fas fa-seedling"></i>
+                    </div>
+                    <h3>مرحلة الرؤية</h3>
+                    <p>مشاريع في المراحل المبكرة من التطوير والتجريب</p>
+                </div>
+                
+                <div class="maturity-card">
+                    <div class="maturity-icon">
+                        <i class="fas fa-leaf"></i>
+                    </div>
+                    <h3>مرحلة النمو</h3>
+                    <p>مشاريع ذات اعتماد متزايد وتطوير نشط</p>
+                </div>
+                
+                <div class="maturity-card">
+                    <div class="maturity-icon">
+                        <i class="fas fa-tree"></i>
+                    </div>
+                    <h3>مرحلة النضج</h3>
+                    <p>مشاريع مستقرة مع قاعدة مستخدمين واسعة ونظام بيئي نشط</p>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Project Acceptance Criteria -->
+        <div class="criteria-section">
+            <h2>معايير القبول</h2>
+            <p>لكي يتم قبول المشروع في كلاود سيدز منا، يجب أن يلبي المعايير التالية:</p>
+            
+            <ul class="criteria-list">
+                <li>أن يكون مفتوح المصدر بالكامل تحت ترخيص معتمد من OSI</li>
+                <li>أن يتبنى حوكمة شفافة وشاملة</li>
+                <li>أن يكون مستقلاً عن البائع والتكنولوجيا</li>
+                <li>أن يدعم الممارسات الحديثة للحوسبة السحابية</li>
+                <li>أن يوفر قيمة واضحة للنظام البيئي للحوسبة السحابية</li>
+            </ul>
+        </div>
+        
+        <!-- How to Contribute -->
+        <div class="contribute-section" id="submit-project">
+            <h2>كيفية المساهمة</h2>
+            <p>نرحب بمساهمات من جميع المطورين والمنظمات في منطقة الشرق الأوسط.</p>
+            
+            <div class="contribute-grid">
+                <div class="contribute-card">
+                    <div class="contribute-icon">
+                        <i class="fab fa-github"></i>
+                    </div>
+                    <h3>استكشف المستودعات</h3>
+                    <p>استكشف مستودعات GitHub الخاصة بنا وابدأ بالمساهمة في المشاريع القائمة</p>
+                    <a href="https://github.com/cloudseeds-mena" class="btn-more" target="_blank">زيارة GitHub</a>
+                </div>
+                
+                <div class="contribute-card">
+                    <div class="contribute-icon">
+                        <i class="fas fa-book"></i>
+                    </div>
+                    <h3>قراءة الإرشادات</h3>
+                    <p>اقرأ إرشادات المساهمة لكل مشروع قبل البدء</p>
+                    <a href="/ar/community/contributing" class="btn-more">إرشادات المساهمة</a>
+                </div>
+                
+                <div class="contribute-card">
+                    <div class="contribute-icon">
+                        <i class="fas fa-comments"></i>
+                    </div>
+                    <h3>التواصل مع المجتمع</h3>
+                    <p>تواصل مع المجتمع عبر قنوات Slack وقوائم البريد الإلكتروني</p>
+                    <a href="/ar/community" class="btn-more">انضم إلى المجتمع</a>
+                </div>
+            </div>
+            
+            <div class="submit-project-cta">
+                <h2>تقديم مشروع جديد</h2>
+                <p>هل لديك مشروع مفتوح المصدر يتوافق مع معاييرنا وترغب في انضمامه إلى كلاود سيدز منا؟</p>
+                <a href="/ar/projects/submit" class="btn-primary">تقديم مشروع</a>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Add project-specific CSS -->
+<style>
+    .projects-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+        gap: 2rem;
+        margin: 2rem 0;
+    }
+    
+    .project-card {
+        background-color: white;
+        border-radius: var(--border-radius);
+        overflow: hidden;
+        box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+        transition: var(--transition);
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+    }
+    
+    .project-card:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 15px 30px rgba(0,0,0,0.1);
+    }
+    
+    .project-image {
+        height: 200px;
+        overflow: hidden;
+    }
+    
+    .project-image img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+    
+    .project-content {
+        padding: 1.5rem;
+        display: flex;
+        flex-direction: column;
+        flex-grow: 1;
+    }
+    
+    .project-tagline {
+        color: var(--primary-color);
+        font-weight: 500;
+        margin-bottom: 0.5rem;
+    }
+    
+    .project-maturity {
+        display: inline-block;
+        padding: 0.3rem 0.8rem;
+        background-color: var(--light-color);
+        border-radius: 20px;
+        font-size: 0.85rem;
+        color: var(--primary-color);
+        margin-bottom: 1rem;
+        border: 1px solid #e0e0e0;
+    }
+    
+    .project-links {
+        margin-top: auto;
+        display: flex;
+        gap: 1rem;
+        flex-wrap: wrap;
+    }
+    
+    .btn-github {
+        display: inline-flex;
+        align-items: center;
+        gap: 0.5rem;
+        background-color: #24292e;
+        color: white;
+        padding: 0.6rem 1.2rem;
+        border-radius: var(--border-radius);
+        text-decoration: none;
+        font-weight: 600;
+        transition: var(--transition);
+    }
+    
+    .btn-github:hover {
+        background-color: #000;
+        transform: translateY(-2px);
+    }
+    
+    .section-title {
+        font-size: 2rem;
+        margin: 3rem 0 1.5rem;
+        position: relative;
+        padding-bottom: 0.5rem;
+    }
+    
+    .section-title::after {
+        content: '';
+        position: absolute;
+        width: 60px;
+        height: 3px;
+        background-color: var(--accent-color);
+        bottom: 0;
+        right: 0;
+    }
+    
+    .maturity-section, .criteria-section, .contribute-section {
+        margin: 4rem 0;
+        padding: 2rem;
+        background-color: var(--light-color);
+        border-radius: var(--border-radius);
+    }
+    
+    .maturity-grid, .contribute-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+        gap: 2rem;
+        margin: 2rem 0;
+    }
+    
+    .maturity-card, .contribute-card {
+        background-color: white;
+        border-radius: var(--border-radius);
+        padding: 1.5rem;
+        box-shadow: 0 4px 8px rgba(0,0,0,0.05);
+        transition: var(--transition);
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+    
+    .maturity-card:hover, .contribute-card:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 8px 16px rgba(0,0,0,0.1);
+    }
+    
+    .maturity-icon, .contribute-icon {
+        width: 60px;
+        height: 60px;
+        background: linear-gradient(135deg, var(--primary-color) 0%, #003366 100%);
+        color: white;
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-bottom: 1.5rem;
+    }
+    
+    .maturity-icon i, .contribute-icon i {
+        font-size: 1.8rem;
+    }
+    
+    .criteria-list {
+        padding-right: 1.5rem;
+        line-height: 1.8;
+    }
+    
+    .criteria-list li {
+        margin-bottom: 0.8rem;
+    }
+    
+    .submit-project-cta {
+        margin-top: 3rem;
+        padding: 2rem;
+        background: linear-gradient(135deg, var(--primary-color) 0%, #003366 100%);
+        color: white;
+        border-radius: var(--border-radius);
+        text-align: center;
+    }
+    
+    .submit-project-cta h2 {
+        color: white;
+        margin-bottom: 1rem;
+    }
+    
+    .submit-project-cta p {
+        margin-bottom: 1.5rem;
+        max-width: 800px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    
+    @media (max-width: 768px) {
+        .projects-grid {
+            grid-template-columns: 1fr;
+        }
+        
+        .project-links {
+            flex-direction: column;
+        }
+    }
+</style>
+{{ end }}
