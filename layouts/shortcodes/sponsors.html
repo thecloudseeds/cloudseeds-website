@@ -1,0 +1,9 @@
+<div class="sponsors-grid">
+    {{ range .Site.Data.sponsors }}
+    <div class="sponsor-item">
+        <a href="{{ .url }}" target="_blank" rel="noopener">
+            <img src="{{ .logo | relURL }}" alt="{{ .name }}" title="{{ .name }}">
+        </a>
+    </div>
+    {{ end }}
+</div>

@@ -1,0 +1,13 @@
+- name: "Example Company 1"
+  logo: "/img/sponsors/example1.svg"
+  url: "https://example1.com"
+
+- name: "Example Company 2"
+  logo: "/img/sponsors/example2.svg"
+  url: "https://example2.com"
+
+- name: "Example Company 3"
+  logo: "/img/sponsors/example3.svg"
+  url: "https://example3.com"
+
+# Add more sponsors as needed

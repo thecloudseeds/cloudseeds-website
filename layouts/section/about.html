@@ -1,0 +1,27 @@
+{{ define "main" }}
+<div class="about-page-wrapper">
+    <!-- Hero section from the content -->
+    <div class="hero-section">
+        <h1>{{ .Title }}</h1>
+        <p>نقود الابتكار في مجال الحوسبة السحابية المفتوحة المصدر في منطقة الشرق الأوسط</p>
+        <a href="/community" class="btn-primary">انضم إلينا</a>
+    </div>
+
+    <!-- Simply render the content which will process any shortcodes -->
+    {{ .Content }}
+    
+    <!-- Debug information to help diagnose data issues -->
+    {{ if .Site.IsServer }}
+    <div style="margin-top: 40px; padding: 15px; background: #f8f8f8; border: 1px solid #ddd;">
+        <h4>Data Debug Info (only visible in development):</h4>
+        <p>Available data keys: {{ range $key, $value := .Site.Data.team }}{{ $key }}, {{ end }}</p>
+        <hr>
+        <p>Team Data Count: {{ len .Site.Data.team }}</p>
+        <hr>
+        <p>Technical Committee Data: {{ if .Site.Data.team.technicalcommittee }}✅ Available ({{ len .Site.Data.team.technicalcommittee }} members){{ else }}❌ Not Available{{ end }}</p>
+        <p>Ambassadors Data: {{ if .Site.Data.team.ambassadors }}✅ Available ({{ len .Site.Data.team.ambassadors }} members){{ else }}❌ Not Available{{ end }}</p>
+        <p>Governing Board Data: {{ if .Site.Data.team.governingboard }}✅ Available ({{ len .Site.Data.team.governingboard }} members){{ else }}❌ Not Available{{ end }}</p>
+    </div>
+    {{ end }}
+</div>
+{{ end }}

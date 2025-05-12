@@ -61,6 +61,28 @@
         </div>
     </div>
 
+    <!-- Sponsors Section -->
+    <div class="sponsors-section">
+        <h2>الجهات الداعمة</h2>
+        <p>نشكر الشركات والمؤسسات التي تدعم مشاريع كلاود سيدز للمصادر المفتوحة</p>
+        
+        <div class="sponsors-grid">
+            <!-- Sponsor logos will be displayed here -->
+            {{ range .Site.Data.sponsors }}
+            <div class="sponsor-item">
+                <a href="{{ .url }}" target="_blank" rel="noopener">
+                    <img src="{{ .logo | relURL }}" alt="{{ .name }}" title="{{ .name }}">
+                </a>
+            </div>
+            {{ end }}
+        </div>
+        
+        <div class="sponsor-cta">
+            <p>هل ترغب في دعم مشاريع المصادر المفتوحة في منطقة الشرق الأوسط؟</p>
+            <a href="/sponsors/" class="btn-secondary">كن داعماً</a>
+        </div>
+    </div>
+
     <!-- Community Stats -->
     <div class="community-section" hidden >
         <h2>مجتمعنا بالأرقام</h2>

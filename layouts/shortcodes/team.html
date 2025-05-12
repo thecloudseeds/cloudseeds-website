@@ -1,0 +1,14 @@
+{{ $teamName := .Get 0 }}
+{{ if eq $teamName "technicalcommittee" }}
+  <h3>لجنة التوجيه التقني</h3>
+  <p>لجنة التوجيه التقني مسؤولة عن القيادة التقنية في مجتمع المصادر المفتوحة في الشرق الأوسط وشمال أفريقيا، وتوجيه وتقديم المشورة للمشاريع مفتوحة المصدر التي تديرها المؤسسة.</p>
+  {{ partial "team-members.html" (dict "members" .Site.Data.team.technicalcommittee) }}
+{{ else if eq $teamName "ambassadors" }}
+  <h3>سفراء المجتمع التقني</h3>
+  <p>سفراء المجتمع التقني يمثلون كلاود سيدز منا في مختلف المناطق والتخصصات، ويساهمون في نشر المعرفة والوعي حول المصادر المفتوحة في المنطقة.</p>
+  {{ partial "team-members.html" (dict "members" .Site.Data.team.ambassadors) }}
+{{ else if eq $teamName "governingboard" }}
+  <h3>مجلس الإدارة</h3>
+  <p>مجلس الإدارة مسؤول عن توجيه وإدارة المؤسسة وتحديد الاتجاه الاستراتيجي لكلاود سيدز منا.</p>
+  {{ partial "team-members.html" (dict "members" .Site.Data.team.governingboard) }}
+{{ end }}

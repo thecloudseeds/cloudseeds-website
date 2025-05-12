@@ -694,6 +694,174 @@ html[lang="ar"] .btn-more:hover::after {
   background-color: #003d69;
 }
 
+/* Sponsors Section Styles */
+.sponsors-section {
+    padding: 2rem 0;
+    text-align: center;
+    background-color: #f8f9fa;
+    border-radius: 8px;
+    margin: 2rem 0;
+}
+
+.sponsors-section h2 {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+}
+
+.sponsors-section p {
+    max-width: 700px;
+    margin: 0 auto 2rem;
+    color: #666;
+}
+
+.sponsors-grid {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 2rem;
+    margin: 2rem auto;
+    max-width: 1200px;
+}
+
+.sponsor-item {
+    flex: 0 0 calc(25% - 2rem);
+    min-width: 180px;
+    background-color: white;
+    padding: 1.5rem;
+    border-radius: 8px;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.sponsor-item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+.sponsor-item img {
+    max-width: 100%;
+    height: auto;
+    max-height: 80px;
+    display: block;
+    margin: 0 auto;
+}
+
+.sponsor-cta {
+    margin-top: 2rem;
+}
+
+.sponsor-cta p {
+    margin-bottom: 1rem;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .sponsor-item {
+        flex: 0 0 calc(50% - 2rem);
+    }
+}
+
+@media (max-width: 480px) {
+    .sponsor-item {
+        flex: 0 0 100%;
+    }
+}
+
+/* Team Members Cards Styling */
+.team-members {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+  justify-content: center;
+  margin: 2rem 0;
+}
+
+.member-card {
+  background-color: #ffffff;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  padding: 1.5rem;
+  width: 250px;
+  text-align: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.member-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+}
+
+.member-card img {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-bottom: 1rem;
+  border: 3px solid #e6f7ff;
+}
+
+.member-card h4 {
+  margin: 0.5rem 0;
+  color: #333;
+  font-size: 1.2rem;
+}
+
+.member-card p {
+  color: #666;
+  margin-bottom: 1rem;
+  font-size: 0.9rem;
+}
+
+.social-links {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  margin-top: 1rem;
+}
+
+.social-links a {
+  color: #555;
+  font-size: 1.2rem;
+  transition: color 0.2s ease, transform 0.2s ease;
+}
+
+.social-links a:hover {
+  color: #0077B5;
+  transform: scale(1.2);
+}
+
+.social-links a[href*="github"]:hover {
+  color: #333;
+}
+
+.social-links a[href*="twitter"]:hover {
+  color: #1DA1F2;
+}
+
+/* Dark mode adjustments */
+@media (prefers-color-scheme: dark) {
+  .member-card {
+    background-color: #2d2d2d;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+  }
+  
+  .member-card h4 {
+    color: #f0f0f0;
+  }
+  
+  .member-card p {
+    color: #cccccc;
+  }
+  
+  .member-card img {
+    border-color: #1a4a6e;
+  }
+  
+  .social-links a {
+    color: #aaa;
+  }
+}
+
 /* Footer - CNCF Style */
 footer {
   padding: 4rem 2rem 2rem;

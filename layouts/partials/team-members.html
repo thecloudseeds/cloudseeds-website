@@ -1,0 +1,27 @@
+{{ $teamMembers := .members }}
+<div class="team-members">
+  {{ range $teamMembers }}
+  <div class="member-card">
+    <img src="{{ .picture }}" alt="{{ .name }}">
+    <h4>{{ .name }}</h4>
+    <p>{{ .role }}</p>
+    <div class="social-links">
+      {{ if .github }}
+      <a href="https://github.com/{{ .github }}" target="_blank" title="GitHub">
+        <i class="fab fa-github"></i>
+      </a>
+      {{ end }}
+      {{ if .linkedin }}
+      <a href="https://linkedin.com/in/{{ .linkedin }}" target="_blank" title="LinkedIn">
+        <i class="fab fa-linkedin"></i>
+      </a>
+      {{ end }}
+      {{ if .twitter }}
+      <a href="https://twitter.com/{{ .twitter }}" target="_blank" title="Twitter/X">
+        <i class="fab fa-x-twitter"></i>
+      </a>
+      {{ end }}
+    </div>
+  </div>
+  {{ end }}
+</div>
