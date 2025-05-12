@@ -1,13 +1,14 @@
-- name: "Example Company 1"
-  logo: "/img/sponsors/example1.svg"
-  url: "https://example1.com"
 
-- name: "Example Company 2"
-  logo: "/img/sponsors/example2.svg"
-  url: "https://example2.com"
+- name: "Tactful AI"
+  logo: "/img/sponsors/tactful.svg"
+  url: "https://tactful.ai/"
 
-- name: "Example Company 3"
-  logo: "/img/sponsors/example3.svg"
-  url: "https://example3.com"
+- name: "Code Quests"
+  logo: "/img/sponsors/code-quests.webp" 
+  url: "https://code-quests.com/"
+
+- name: "Robusta"
+  logo: "/img/sponsors/robusta.png"
+  url: "https://robustagroup.com/"
 
 # Add more sponsors as needed

@@ -7,8 +7,12 @@
         <a href="/community" class="btn-primary">انضم إلينا</a>
     </div>
 
-    <!-- Simply render the content which will process any shortcodes -->
-    {{ .Content }}
+    <!-- Content wrapped in a content-container for proper margins -->
+    <div class="content-container">
+        <div class="page-content">
+            {{ .Content }}
+        </div>
+    </div>
     
     <!-- Debug information to help diagnose data issues -->
     {{ if .Site.IsServer }}
